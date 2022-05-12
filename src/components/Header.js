@@ -9,11 +9,9 @@ import logo from "../logo.png"; // Tell webpack this JS file uses this image
 import { styled, alpha } from "@mui/material/styles";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
-import EditIcon from "@mui/icons-material/Edit";
+
 import Divider from "@mui/material/Divider";
-import ArchiveIcon from "@mui/icons-material/Archive";
-import FileCopyIcon from "@mui/icons-material/FileCopy";
-import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
+
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 const StyledMenu = styled((props) => (
@@ -94,6 +92,7 @@ export default function BasicButtons() {
           variant="extended"
           disableElevation
           onClick={handleClick}
+          onMouseOver={handleClick}
           endIcon={<KeyboardArrowDownIcon />}
         >
           Products 2
@@ -102,27 +101,71 @@ export default function BasicButtons() {
           id="demo-customized-menu"
           MenuListProps={{
             "aria-labelledby": "demo-customized-button",
+            onMouseLeave: handleClose
           }}
           anchorEl={anchorEl}
           open={open}
           onClose={handleClose}
         >
           <MenuItem onClick={handleClose} disableRipple>
-            <EditIcon />
-            Edit
+            
+            Tea 1
           </MenuItem>
           <MenuItem onClick={handleClose} disableRipple>
-            <FileCopyIcon />
-            Duplicate
+            
+            Tea 2
           </MenuItem>
           <Divider sx={{ my: 0.5 }} />
           <MenuItem onClick={handleClose} disableRipple>
-            <ArchiveIcon />
-            Archive
+            
+            Tea 3
           </MenuItem>
           <MenuItem onClick={handleClose} disableRipple>
-            <MoreHorizIcon />
-            More
+            
+            Tea 4
+          </MenuItem>
+        </StyledMenu>
+      </div>
+      <div>
+        <Button
+          id="demo-customized-button"
+          aria-controls={open ? "demo-customized-menu" : undefined}
+          aria-haspopup="true"
+          aria-expanded={open ? "true" : undefined}
+          variant="extended"
+          disableElevation
+          onClick={handleClick}
+          onMouseOver={handleClick}
+          endIcon={<KeyboardArrowDownIcon />}
+        >
+          Products 3
+        </Button>
+        <StyledMenu
+          id="demo-customized-menu"
+          MenuListProps={{
+            "aria-labelledby": "demo-customized-button",
+            onMouseLeave: handleClose
+          }}
+          anchorEl={anchorEl}
+          open={open}
+          onClose={handleClose}
+        >
+          <MenuItem onClick={handleClose} disableRipple>
+            
+            Tea 1
+          </MenuItem>
+          <MenuItem onClick={handleClose} disableRipple>
+            
+            Tea 2
+          </MenuItem>
+          <Divider sx={{ my: 0.5 }} />
+          <MenuItem onClick={handleClose} disableRipple>
+            
+            Tea 3
+          </MenuItem>
+          <MenuItem onClick={handleClose} disableRipple>
+            
+            Tea 4
           </MenuItem>
         </StyledMenu>
       </div>
