@@ -4,6 +4,7 @@ import './index.css';
 // import Logo from './components/Logo';
 import Header from './components/Header';
 import Badge from './components/Badge';
+import Carousel from './components/Carousel';
 // import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -12,6 +13,7 @@ root.render(
     {/* <Logo /> */}
     <Badge />
     <Header />
+    <Carousel />
   </React.StrictMode>
 );
 

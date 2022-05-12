@@ -1,27 +1,50 @@
-import * as React from 'react';
-import Badge from '@mui/material/Badge';
-import { styled } from '@mui/material/styles';
-import IconButton from '@mui/material/IconButton';
+import * as React from "react";
+import Stack from "@mui/material/Stack";
+import Badge from "@mui/material/Badge";
+import MailIcon from "@mui/icons-material/Mail";
+import IconButton from "@mui/material/IconButton";
+import FacebookIcon from '@mui/icons-material/Facebook';
+import InstagramIcon from '@mui/icons-material/Instagram';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
-const StyledBadge = styled(Badge)(({ theme }) => ({
-  '& .MuiBadge-badge': {
-    right: -3,
-    top: 13,
-    border: `2px solid ${theme.palette.background.paper}`,
-    padding: '0 4px',
-  },
-}));
+function notificationsLabel(count) {
+  if (count === 0) {
+    return "no notifications";
+  }
+  if (count > 99) {
+    return "more than 99 notifications";
+  }
+  return `${count} notifications`;
+}
 
-export default function CustomizedBadges() {
+export default function BadgeMax() {
   return (
-    <IconButton aria-label="cart">
-      <StyledBadge badgeContent={4} color="secondary">
-        <ShoppingCartIcon />
-      </StyledBadge>
-      <StyledBadge badgeContent={4} color="secondary">
-        <ShoppingCartIcon />
-      </StyledBadge>
-    </IconButton>
+    <Stack
+      justifyContent="end"
+      spacing={1}
+      direction="row"
+      sx={{ color: "action.active" }}
+    >
+        <IconButton aria-label={notificationsLabel(100)}>
+        <Badge color="secondary" badgeContent={3}>
+          <ShoppingCartIcon />
+        </Badge>
+      </IconButton>
+      <IconButton aria-label={notificationsLabel(100)}>
+        <Badge color="secondary" badgeContent={1}>
+          <MailIcon />
+        </Badge>
+      </IconButton>
+      <IconButton aria-label={notificationsLabel(100)}>
+        <Badge color="secondary" >
+          <FacebookIcon />
+        </Badge>
+      </IconButton>
+      <IconButton aria-label={notificationsLabel(100)}>
+        <Badge color="secondary" >
+          <InstagramIcon />
+        </Badge>
+      </IconButton>
+    </Stack>
   );
 }

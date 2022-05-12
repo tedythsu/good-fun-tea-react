@@ -1,7 +1,9 @@
 import * as React from "react";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
-import logo from "../logo.png"; // Tell webpack this JS file uses this image
+import logo from "../logo.png";
+import LoginIcon from '@mui/icons-material/Login';
+import SearchIcon from '@mui/icons-material/Search';
 
 // import InfoIcon from "@mui/icons-material/Info";
 // import InventoryIcon from "@mui/icons-material/Inventory";
@@ -69,24 +71,24 @@ export default function BasicButtons() {
 
   return (
     <Stack
-      spacing={2}
+      spacing={1}
       direction="row"
       justifyContent="center"
       alignItems="center"
     >
-      <img src={logo} alt="Logo" height="150px" />
+      <img src={logo} alt="Logo" height="125px" />
       <Button variant="extended">
         {/* <InfoIcon sx={{ mr: 1 }} /> */}
-        About
+        關於我們 About Us
       </Button>
       <Button variant="extended">
         {/* <InventoryIcon sx={{ mr: 1 }} /> */}
-        Products
+        冷泡茶 Cold Brewed Tea
       </Button>
       <div>
         <Button
           id="demo-customized-button"
-          aria-controls={open ? "demo-customized-menu" : undefined}
+          aria-controls={open ? "demo-customized-menu-giftBox" : undefined}
           aria-haspopup="true"
           aria-expanded={open ? "true" : undefined}
           variant="extended"
@@ -95,80 +97,41 @@ export default function BasicButtons() {
           onMouseOver={handleClick}
           endIcon={<KeyboardArrowDownIcon />}
         >
-          Products 2
+          禮盒 Gift Box
         </Button>
         <StyledMenu
-          id="demo-customized-menu"
+          id="demo-customized-menu-giftBox"
           MenuListProps={{
             "aria-labelledby": "demo-customized-button",
-            onMouseLeave: handleClose
+            onMouseLeave: handleClose,
           }}
           anchorEl={anchorEl}
           open={open}
           onClose={handleClose}
         >
           <MenuItem onClick={handleClose} disableRipple>
-            
-            Tea 1
+            選項一
           </MenuItem>
           <MenuItem onClick={handleClose} disableRipple>
-            
-            Tea 2
+            選項二
           </MenuItem>
           <Divider sx={{ my: 0.5 }} />
           <MenuItem onClick={handleClose} disableRipple>
-            
-            Tea 3
+            選項三
           </MenuItem>
           <MenuItem onClick={handleClose} disableRipple>
-            
-            Tea 4
+            選項四
           </MenuItem>
         </StyledMenu>
       </div>
-      <div>
-        <Button
-          id="demo-customized-button"
-          aria-controls={open ? "demo-customized-menu" : undefined}
-          aria-haspopup="true"
-          aria-expanded={open ? "true" : undefined}
-          variant="extended"
-          disableElevation
-          onClick={handleClick}
-          onMouseOver={handleClick}
-          endIcon={<KeyboardArrowDownIcon />}
-        >
-          Products 3
-        </Button>
-        <StyledMenu
-          id="demo-customized-menu"
-          MenuListProps={{
-            "aria-labelledby": "demo-customized-button",
-            onMouseLeave: handleClose
-          }}
-          anchorEl={anchorEl}
-          open={open}
-          onClose={handleClose}
-        >
-          <MenuItem onClick={handleClose} disableRipple>
-            
-            Tea 1
-          </MenuItem>
-          <MenuItem onClick={handleClose} disableRipple>
-            
-            Tea 2
-          </MenuItem>
-          <Divider sx={{ my: 0.5 }} />
-          <MenuItem onClick={handleClose} disableRipple>
-            
-            Tea 3
-          </MenuItem>
-          <MenuItem onClick={handleClose} disableRipple>
-            
-            Tea 4
-          </MenuItem>
-        </StyledMenu>
-      </div>
+      <Button variant="extended">
+        <SearchIcon sx={{ mr: 1 }} />
+        搜尋 Search
+      </Button>
+      <Button variant="extended">
+        <LoginIcon sx={{ mr: 1 }} />
+        會員登入 Login
+      </Button>
     </Stack>
   );
 }
