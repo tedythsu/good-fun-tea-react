@@ -1,7 +1,7 @@
 // Import css files
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import logo from "./Slide.jpg";
+
 
 import React from "react";
 import Slider from "react-slick";
@@ -16,26 +16,39 @@ export default function SimpleSlider() {
     autoplay: true,
     autoplaySpeed: 3000,
     pauseOnHover: true,
+    arrows: false,
   };
   return (
     <Slider {...settings}>
       <div>
-        <img width="100%" src="https://images.unsplash.com/photo-1571934811356-5cc061b6821f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=80" alt="test" />
+        <img
+          width="100%"
+          src="https://picsum.photos/1000/300"
+          alt="test"
+        />
       </div>
       <div>
-        <img width="100%" src="https://images.unsplash.com/photo-1523906630133-f6934a1ab2b9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=80" alt="test" />
+        <img
+          width="100%"
+          src="https://picsum.photos/1001/300"
+          alt="test"
+        />
       </div>
       <div>
-        <img width="100%" src="https://images.unsplash.com/photo-1558160074-4d7d8bdf4256?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=80" alt="test" />
+        <img
+          width="100%"
+          src="https://picsum.photos/1002/300"
+          alt="test"
+        />
       </div>
       <div>
-        <img width="100%" src={logo} alt="test" />
+        <img width="100%" src="https://picsum.photos/1003/300" alt="test" />
       </div>
       <div>
-        <img width="100%" src={logo} alt="test" />
+        <img width="100%" src="https://picsum.photos/1004/300" alt="test" />
       </div>
       <div>
-        <img width="100%" src={logo} alt="test" />
+        <img width="100%" src="https://picsum.photos/1005/300" alt="test" />
       </div>
     </Slider>
   );

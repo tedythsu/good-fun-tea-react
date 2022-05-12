@@ -10,7 +10,6 @@ import Carousel from './components/Carousel';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    {/* <Logo /> */}
     <Badge />
     <Header />
     <Carousel />
