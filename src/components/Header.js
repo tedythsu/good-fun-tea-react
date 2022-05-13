@@ -84,7 +84,7 @@ export default function BasicButtons() {
         
       >
         {/* <Toolbar> */}
-          <img src={logo} alt="Logo" height="125px" />
+          <a href="."><img src={logo} alt="Logo" height="125px" /></a>
           <Button variant="extended">
             {/* <InfoIcon sx={{ mr: 1 }} /> */}
             關於我們 About Us

@@ -7,12 +7,17 @@ import Badge from './components/Badge';
 import Carousel from './components/Carousel';
 // import reportWebVitals from './reportWebVitals';
 
+import Heading from './components/Heading';
+import ImageList from './components/ImageList';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Badge />
     <Header />
     <Carousel />
+    <Heading />
+    <ImageList />
   </React.StrictMode>
 );
 
