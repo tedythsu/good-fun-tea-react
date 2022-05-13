@@ -75,19 +75,22 @@ export default function BasicButtons() {
   };
 
   return (
-    <AppBar position="sticky" id="stickyBar">
+    // <AppBar position="sticky" id="stickyBar">
       <Stack
-        spacing={2}
-        direction="row"
+      spacing={{ xs: 1, sm: 2, md: 4 }}
+        direction={{ xs: 'column', sm: 'row' }}
         justifyContent="center"
         alignItems="center"
+        
       >
-        <Toolbar>
+        {/* <Toolbar> */}
           <img src={logo} alt="Logo" height="125px" />
           <Button variant="extended">
             {/* <InfoIcon sx={{ mr: 1 }} /> */}
             關於我們 About Us
+            
           </Button>
+          {/* <Divider orientation="vertical" variant="middle" flexItem /> */}
           <Button variant="extended">
             {/* <InventoryIcon sx={{ mr: 1 }} /> */}
             冷泡茶 Cold Brewed Tea
@@ -139,8 +142,8 @@ export default function BasicButtons() {
             <LoginIcon sx={{ mr: 1 }} />
             會員登入 Login
           </Button>
-        </Toolbar>
+        {/* </Toolbar> */}
       </Stack>
-    </AppBar>
+    // </AppBar>
   );
 }
