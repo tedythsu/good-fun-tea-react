@@ -1,15 +1,30 @@
-import * as React from 'react';
-import ImageList from '@mui/material/ImageList';
-import ImageListItem from '@mui/material/ImageListItem';
-import ImageListItemBar from '@mui/material/ImageListItemBar';
+import * as React from "react";
+import ImageList from "@mui/material/ImageList";
+import ImageListItem from "@mui/material/ImageListItem";
+import ImageListItemBar from "@mui/material/ImageListItemBar";
 
-// sx={{ width: 500, height: 450 }}
+import Button from "@mui/material/Button";
+import DeleteIcon from "@mui/icons-material/Delete";
+import SendIcon from "@mui/icons-material/Send";
+import Stack from "@mui/material/Stack";
+import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
+
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+
+const theme = createTheme({
+    typography: {
+      fontFamily: 'Noto Serif TC, cursive',
+    },
+  });
+
+
 
 export default function TitlebarBelowImageList() {
   return (
-     <ImageList sx={{ margin: '50px' }}> 
+    <ThemeProvider theme={theme}>
+    <ImageList sx={{ margin: "50px" }}>
       {itemData.map((item) => (
-        <ImageListItem key={item.img}>
+        <ImageListItem key={item.img} sx={{ margin: "10px" }}>
           <img
             src={`${item.img}?w=248&fit=crop&auto=format`}
             srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
@@ -18,44 +33,52 @@ export default function TitlebarBelowImageList() {
           />
           <ImageListItemBar
             title={item.title}
-            subtitle={<span>by: {item.author}</span>}
+            // subtitle={<span>by: {item.author}</span>}
             position="below"
+            align="center"
           />
+          {/* <Stack direction="row" spacing={1} justifyContent="center">
+            <Button variant="contained" color="success" endIcon={<ShoppingBagIcon />}>
+              加入購物車
+            </Button>
+          </Stack> */}
+          
         </ImageListItem>
       ))}
     </ImageList>
+    </ThemeProvider>
   );
 }
 
 const itemData = [
   {
-    img: 'https://unsplash.com/photos/m-gqDRzbJLQ/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjUyNDUzNjA1&force=true&w=1920',
-    title: 'Breakfast',
-    author: '@bkristastucchio',
+    img: "https://unsplash.com/photos/m-gqDRzbJLQ/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjUyNDUzNjA1&force=true&w=1920",
+    title: "包種茶",
+    author: "@bkristastucchio",
   },
   {
-    img: 'https://unsplash.com/photos/waTzoTvrFFs/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjUyNDU1NzU2&force=true&w=1920',
-    title: 'Coffee',
-    author: '@nolanissac',
+    img: "https://unsplash.com/photos/waTzoTvrFFs/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjUyNDU1NzU2&force=true&w=1920",
+    title: "東方美人茶",
+    author: "@nolanissac",
   },
   {
-    img: 'https://unsplash.com/photos/L82-kkEBOd0/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8NTN8fHRlYXxlbnwwfHx8fDE2NTI0NDk4MDk&force=true&w=1920',
-    title: 'Honey',
-    author: '@arwinneil',
+    img: "https://unsplash.com/photos/L82-kkEBOd0/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8NTN8fHRlYXxlbnwwfHx8fDE2NTI0NDk4MDk&force=true&w=1920",
+    title: "金萱茶",
+    author: "@arwinneil",
   },
   {
-    img: 'https://unsplash.com/photos/cmWUcVSJWOw/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjUyNDU1Njkx&force=true&w=1920',
-    title: 'Fern',
-    author: '@katie_wasserman',
+    img: "https://unsplash.com/photos/cmWUcVSJWOw/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjUyNDU1Njkx&force=true&w=1920",
+    title: "鐵觀音茶",
+    author: "@katie_wasserman",
   },
   {
-    img: 'https://unsplash.com/photos/bAzDhilQFsA/download?force=true&w=1920',
-    title: 'Mushrooms',
-    author: '@silverdalex',
+    img: "https://unsplash.com/photos/bAzDhilQFsA/download?force=true&w=1920",
+    title: "台茶十八號",
+    author: "@silverdalex",
   },
   {
-    img: 'https://unsplash.com/photos/K3ymmfqBQzM/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8MzV8fHRlYXxlbnwwfHx8fDE2NTI0MDA5MjA&force=true&w=1920',
-    title: 'Tomato basil',
-    author: '@shelleypauls',
+    img: "https://unsplash.com/photos/K3ymmfqBQzM/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8MzV8fHRlYXxlbnwwfHx8fDE2NTI0MDA5MjA&force=true&w=1920",
+    title: "阿里山茶",
+    author: "@shelleypauls",
   },
 ];

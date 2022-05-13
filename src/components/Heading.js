@@ -45,11 +45,10 @@ export default function Types() {
   return (
     <Box sx={{  width: '100%', maxWidth: 500, margin:'auto', letterSpacing: 12 }}>
       <ThemeProvider theme={theme}>
-      <Typography className="Heading" variant="h3" gutterBottom component="div" marginTop="75px" align="center">
+      <Typography variant="h3" gutterBottom component="div" marginTop="75px" align="center">
         古風茶創六大商品
       </Typography>
-     
-      <Typography sx={{ letterSpacing: { xs: 1, md: 6, lg: 7}  }} className="Heading" variant="overline" display="block" gutterBottom align="center" color="warning.dark">
+      <Typography sx={{ letterSpacing: { xs: 1, md: 6, lg: 7}  }} variant="overline" display="block" gutterBottom align="center" color="warning.dark">
         用心堅持，把每一滴味道做到最好
       </Typography>
       </ThemeProvider>
