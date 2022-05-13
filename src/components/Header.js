@@ -5,7 +5,6 @@ import logo from "../logo.png";
 import LoginIcon from "@mui/icons-material/Login";
 import SearchIcon from "@mui/icons-material/Search";
 
-import "./Header.css";
 
 // import { AppBar } from "@mui/material";
 // import { Toolbar } from "@mui/material";
