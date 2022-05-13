@@ -116,7 +116,7 @@ export default function PersistentDrawerLeft() {
             </IconButton>
             <Typography variant="h6" noWrap component="div"></Typography>
             {/* <a href="."><img src={logo} alt="Logo" height="50px" /></a> */}
-            <Badge justifyContent="end" />
+            <Badge sx={{ display: { xs: 'none', lg: 'flex' } }} justifyContent="end"/>
           </Toolbar>
         </AppBar>
       </ThemeProvider>
@@ -145,7 +145,7 @@ export default function PersistentDrawerLeft() {
         </DrawerHeader>
         <Divider />
         <List>
-          {["About Us", "Cold Brewed Tea", "Gift Box", "Search", "Login"].map(
+          {["關於我們", "冷泡茶", "禮盒", "搜尋", "會員登入"].map(
             (text, index) => (
               <ListItem key={text} disablePadding>
                 <ListItemButton>

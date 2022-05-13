@@ -28,16 +28,16 @@ const theme = createMuiTheme({
   };
 
   theme.typography.overline = {
-    fontSize: '0.25rem',
+    fontSize: '0.7rem',
     fontFamily: [
         'Noto Serif TC',
         'cursive',
       ].join(','),
     '@media (min-width:600px)': {
-      fontSize: '0.45rem',
+      fontSize: '0.9rem',
     },
     [theme.breakpoints.up('md')]: {
-      fontSize: '0.7rem',
+      fontSize: '1rem',
     },
   };
 
@@ -49,7 +49,7 @@ export default function Types() {
         古風茶創六大商品
       </Typography>
      
-      <Typography className="Heading" variant="overline" display="block" gutterBottom align="center" color="warning.dark">
+      <Typography sx={{ letterSpacing: { xs: 1, md: 6, lg: 7}  }} className="Heading" variant="overline" display="block" gutterBottom align="center" color="warning.dark">
         用心堅持，把每一滴味道做到最好
       </Typography>
       </ThemeProvider>
