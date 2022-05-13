@@ -7,8 +7,8 @@ import SearchIcon from "@mui/icons-material/Search";
 
 import "./Header.css";
 
-import { AppBar } from "@mui/material";
-import { Toolbar } from "@mui/material";
+// import { AppBar } from "@mui/material";
+// import { Toolbar } from "@mui/material";
 
 // import InfoIcon from "@mui/icons-material/Info";
 // import InventoryIcon from "@mui/icons-material/Inventory";
