@@ -5,6 +5,10 @@ import logo from "../logo.png";
 import LoginIcon from "@mui/icons-material/Login";
 import SearchIcon from "@mui/icons-material/Search";
 
+import { ThemeProvider, createMuiTheme } from '@mui/material/styles';
+
+
+
 
 // import { AppBar } from "@mui/material";
 // import { Toolbar } from "@mui/material";
@@ -19,6 +23,15 @@ import MenuItem from "@mui/material/MenuItem";
 import Divider from "@mui/material/Divider";
 
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+
+const theme = createMuiTheme({
+    typography: {
+      fontFamily: [
+        'Noto Sans TC',
+        'sans-serif',
+      ].join(','),
+    },});
+
 
 const StyledMenu = styled((props) => (
   <Menu
@@ -84,6 +97,7 @@ export default function BasicButtons() {
       >
         {/* <Toolbar> */}
           <a href="."><img src={logo} alt="Logo" height="125px" /></a>
+          <ThemeProvider theme={theme}>
           <Button variant="extended">
             {/* <InfoIcon sx={{ mr: 1 }} /> */}
             關於我們 About Us
@@ -141,6 +155,7 @@ export default function BasicButtons() {
             <LoginIcon sx={{ mr: 1 }} />
             會員登入 Login
           </Button>
+          </ThemeProvider>
         {/* </Toolbar> */}
       </Stack>
     // </AppBar>
