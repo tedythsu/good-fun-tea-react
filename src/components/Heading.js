@@ -43,7 +43,7 @@ const theme = createMuiTheme({
 
 export default function Types() {
   return (
-    <Box sx={{  width: '100%', maxWidth: 500, margin:'auto', letterSpacing: 12 }}>
+    <Box sx={{ width: '100%', maxWidth: 500, margin:'auto', letterSpacing: 12 }}>
       <ThemeProvider theme={theme}>
       <Typography variant="h3" gutterBottom component="div" marginTop="75px" align="center">
         古風茶創六大商品

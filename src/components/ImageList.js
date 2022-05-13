@@ -17,14 +17,14 @@ const theme = createTheme({
     },
   });
 
-
+//sx={{ letterSpacing: { xs: 1, md: 6, lg: 7}  }}
 
 export default function TitlebarBelowImageList() {
   return (
     <ThemeProvider theme={theme}>
-    <ImageList sx={{ margin: "50px" }}>
+    <ImageList sx={{ margin: { xs:"10px", sm:"20px"} }}>
       {itemData.map((item) => (
-        <ImageListItem key={item.img} sx={{ margin: "10px" }}>
+        <ImageListItem key={item.img} sx={{ margin: { xs:"5px", md:"20px"} }}>
           <img
             src={`${item.img}?w=248&fit=crop&auto=format`}
             srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
