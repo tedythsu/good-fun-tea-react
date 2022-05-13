@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/GoodFunTea/static/css/main.aedab97f.css",
-    "main.js": "/GoodFunTea/static/js/main.467148e8.js",
+    "main.js": "/GoodFunTea/static/js/main.d86c14b1.js",
     "static/media/logo.png": "/GoodFunTea/static/media/logo.acfbe2352b1d62ccf12a.png",
     "static/media/slick.svg": "/GoodFunTea/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/GoodFunTea/static/media/slick.a4e97f5a2a64f0ab1323.eot",
@@ -9,10 +9,10 @@
     "static/media/slick.woff": "/GoodFunTea/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/GoodFunTea/index.html",
     "main.aedab97f.css.map": "/GoodFunTea/static/css/main.aedab97f.css.map",
-    "main.467148e8.js.map": "/GoodFunTea/static/js/main.467148e8.js.map"
+    "main.d86c14b1.js.map": "/GoodFunTea/static/js/main.d86c14b1.js.map"
   },
   "entrypoints": [
     "static/css/main.aedab97f.css",
-    "static/js/main.467148e8.js"
+    "static/js/main.d86c14b1.js"
   ]
 }
