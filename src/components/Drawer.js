@@ -22,6 +22,8 @@ import Badge from "./Badge";
 import logo from "../logo.png";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
+import AudiotrackIcon from '@mui/icons-material/Audiotrack';
+
 const drawerWidth = 240;
 
 // const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
@@ -114,9 +116,10 @@ export default function PersistentDrawerLeft() {
             >
               <MenuIcon />
             </IconButton>
-            <Typography variant="h6" noWrap component="div"></Typography>
             {/* <a href="."><img src={logo} alt="Logo" height="50px" /></a> */}
-            <Badge sx={{ display: { xs: 'none', lg: 'flex' } }} justifyContent="end"/>
+            <Typography sx={{ margin: "10px" }} variant="h6" noWrap component="div">古風茶創</Typography>
+            <Divider orientation="vertical" variant="middle" flexItem />
+            <Badge />
           </Toolbar>
         </AppBar>
       </ThemeProvider>
@@ -142,6 +145,8 @@ export default function PersistentDrawerLeft() {
               <ChevronRightIcon />
             )}
           </IconButton>
+          {/* <a href="."><img src={logo} alt="Logo" height="50px" /></a> */}
+          <Typography sx={{ margin: "10px" }} variant="h6" noWrap component="div">古風茶創</Typography>
         </DrawerHeader>
         <Divider />
         <List>
@@ -150,7 +155,7 @@ export default function PersistentDrawerLeft() {
               <ListItem key={text} disablePadding>
                 <ListItemButton>
                   <ListItemIcon>
-                    {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                    {index % 2 === 0 ? <AudiotrackIcon /> : <AudiotrackIcon />}
                   </ListItemIcon>
                   <ListItemText primary={text} />
                 </ListItemButton>
