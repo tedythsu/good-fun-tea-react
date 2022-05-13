@@ -10,10 +10,13 @@ import Carousel from './components/Carousel';
 import Heading from './components/Heading';
 import ImageList from './components/ImageList';
 
+import Drawer from './components/Drawer'
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Badge />
+    <Drawer />
     <Header />
     <Carousel />
     <Heading />

@@ -89,10 +89,11 @@ export default function BasicButtons() {
   return (
     // <AppBar position="sticky" id="stickyBar">
       <Stack
-      spacing={{ xs: 1, sm: 2, md: 4 }}
+        spacing={{ xs: 1, sm: 2, md: 4 }}
         direction={{ xs: 'column', md: 'row' }}
         justifyContent="center"
         alignItems="center"
+        sx={{ display: { xs: 'none', lg: 'flex' } }}
         
       >
         {/* <Toolbar> */}
