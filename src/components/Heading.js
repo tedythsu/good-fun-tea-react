@@ -5,18 +5,47 @@ import Typography from '@mui/material/Typography';
 import { ThemeProvider, createMuiTheme } from '@mui/material/styles';
 
 const theme = createMuiTheme({
-  typography: {
+//   typography: {
+//     fontFamily: [
+//       'Noto Serif TC',
+//       'cursive',
+//     ].join(','),
+//   },
+});
+
+  theme.typography.h3 = {
+    fontSize: '1.2rem',
     fontFamily: [
-      'Noto Serif TC',
-      'cursive',
-    ].join(','),
-  },});
+        'Noto Serif TC',
+        'cursive',
+      ].join(','),
+    '@media (min-width:600px)': {
+      fontSize: '1.5rem',
+    },
+    [theme.breakpoints.up('md')]: {
+      fontSize: '2rem',
+    },
+  };
+
+  theme.typography.overline = {
+    fontSize: '0.25rem',
+    fontFamily: [
+        'Noto Serif TC',
+        'cursive',
+      ].join(','),
+    '@media (min-width:600px)': {
+      fontSize: '0.45rem',
+    },
+    [theme.breakpoints.up('md')]: {
+      fontSize: '0.7rem',
+    },
+  };
 
 export default function Types() {
   return (
     <Box sx={{  width: '100%', maxWidth: 500, margin:'auto', letterSpacing: 12 }}>
       <ThemeProvider theme={theme}>
-      <Typography className="Heading" variant="h4" gutterBottom component="div" marginTop="75px" align="center">
+      <Typography className="Heading" variant="h3" gutterBottom component="div" marginTop="75px" align="center">
         古風茶創六大商品
       </Typography>
      

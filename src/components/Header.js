@@ -90,7 +90,7 @@ export default function BasicButtons() {
     // <AppBar position="sticky" id="stickyBar">
       <Stack
       spacing={{ xs: 1, sm: 2, md: 4 }}
-        direction={{ xs: 'column', sm: 'row' }}
+        direction={{ xs: 'column', md: 'row' }}
         justifyContent="center"
         alignItems="center"
         
