@@ -89,6 +89,9 @@ export default function PersistentDrawerLeft() {
         main: "#ffffff",
       },
     },
+    typography: {
+   "fontFamily": `"Noto Serif TC", "Helvetica", "Arial", sans-serif`,
+  }
   });
 
   const [open, setOpen] = React.useState(false);
@@ -116,8 +119,8 @@ export default function PersistentDrawerLeft() {
             >
               <MenuIcon />
             </IconButton>
-            <a href="."><img src={logo} alt="Logo" height="50px" /></a>
-            {/* <Typography sx={{ margin: "10px" }} variant="h6" noWrap component="div">古風茶創</Typography> */}
+            {/* <a href="."><img src={logo} alt="Logo" height="50px" /></a> */}
+            <Typography sx={{ margin: "10px" }} variant="h6" noWrap component="div">古風茶創</Typography>
             <Divider orientation="vertical" variant="middle" flexItem />
             <Badge />
           </Toolbar>
@@ -137,6 +140,7 @@ export default function PersistentDrawerLeft() {
         anchor="left"
         open={open}
       >
+          <ThemeProvider theme={theme}>
         <DrawerHeader>
           <IconButton onClick={handleDrawerClose}>
             {theme.direction === "ltr" ? (
@@ -149,6 +153,7 @@ export default function PersistentDrawerLeft() {
           <Typography sx={{ margin: "10px" }} variant="h6" noWrap component="div">古風茶創</Typography>
         </DrawerHeader>
         <Divider />
+        
         <List>
           {["關於我們", "冷泡茶", "禮盒", "搜尋", "會員登入"].map(
             (text, index) => (
@@ -176,6 +181,7 @@ export default function PersistentDrawerLeft() {
             </ListItem>
           ))}
         </List>
+        </ThemeProvider>
       </Drawer>
 
       {/* <Main open={open}>
