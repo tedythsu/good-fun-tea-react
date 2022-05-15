@@ -5,8 +5,8 @@ import logo from "../logo.png";
 import LoginIcon from "@mui/icons-material/Login";
 import SearchIcon from "@mui/icons-material/Search";
 
-import { ThemeProvider, createMuiTheme } from '@mui/material/styles';
-
+import { ThemeProvider} from '@mui/material/styles';
+import { createMuiTheme } from '@mui/material/styles'
 
 
 
@@ -25,12 +25,14 @@ import Divider from "@mui/material/Divider";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 const theme = createMuiTheme({
-    typography: {
-      fontFamily: [
-        'Noto Sans TC',
-        'sans-serif',
-      ].join(','),
-    },});
+  typography: {
+   "fontFamily": `"Noto Serif TC", "Helvetica", "Arial", sans-serif`,
+   "fontSize": `"0.1rem"`,
+   "fontWeightLight": 300,
+   "fontWeightRegular": 400,
+   "fontWeightMedium": 500
+  }
+});
 
 
 const StyledMenu = styled((props) => (
@@ -93,7 +95,7 @@ export default function BasicButtons() {
         direction={{ xs: 'column', md: 'row' }}
         justifyContent="center"
         alignItems="center"
-        sx={{ display: { xs: 'none', lg: 'flex' } }}
+        sx={{ display: { xs: 'none', md: 'flex' } }}
         
       >
         {/* <Toolbar> */}
@@ -107,7 +109,7 @@ export default function BasicButtons() {
           {/* <Divider orientation="vertical" variant="middle" flexItem /> */}
           <Button variant="extended">
             {/* <InventoryIcon sx={{ mr: 1 }} /> */}
-            冷泡茶 Cold Brewed Tea
+            茶包 Tea Bag
           </Button>
           <div>
             <Button

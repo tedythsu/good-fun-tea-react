@@ -102,7 +102,7 @@ export default function PersistentDrawerLeft() {
   };
 
   return (
-    <Box sx={{ display: { md: "flex", lg: "none" } }}>
+    <Box sx={{ display: { sm: "flex", md: "none" } }}>
       <CssBaseline />
       <ThemeProvider theme={theme}>
         <AppBar position="fixed" open={open} color="secondary">
@@ -116,8 +116,8 @@ export default function PersistentDrawerLeft() {
             >
               <MenuIcon />
             </IconButton>
-            {/* <a href="."><img src={logo} alt="Logo" height="50px" /></a> */}
-            <Typography sx={{ margin: "10px" }} variant="h6" noWrap component="div">古風茶創</Typography>
+            <a href="."><img src={logo} alt="Logo" height="50px" /></a>
+            {/* <Typography sx={{ margin: "10px" }} variant="h6" noWrap component="div">古風茶創</Typography> */}
             <Divider orientation="vertical" variant="middle" flexItem />
             <Badge />
           </Toolbar>
