@@ -175,12 +175,12 @@ const ResponsiveAppBar = () => {
                   <ShoppingCartIcon />
                 </Badge>
               </IconButton>
-              <IconButton aria-label={notificationsLabel(100)} onClick={() => window.open('https://www.facebook.com/%E5%8F%A4%E9%A2%A8%E8%8C%B6%E5%89%B5-Good-Fun-108574641279639/')}>
+              <IconButton sx={{ flexGrow: 0, display: { xs: "none", sm: "inline-flex" } }} aria-label={notificationsLabel(100)} onClick={() => window.open('https://www.facebook.com/%E5%8F%A4%E9%A2%A8%E8%8C%B6%E5%89%B5-Good-Fun-108574641279639/')}>
                 <Badge color="warning">
                   <FacebookIcon />
                 </Badge>
               </IconButton>
-              <IconButton aria-label={notificationsLabel(100)} onClick={() => window.open('https://www.instagram.com/gdfuntea/')}>
+              <IconButton sx={{ flexGrow: 0, display: { xs: "none", sm: "inline-flex" } }} aria-label={notificationsLabel(100)} onClick={() => window.open('https://www.instagram.com/gdfuntea/')}>
                 <Badge color="warning">
                   <InstagramIcon />
                 </Badge>
