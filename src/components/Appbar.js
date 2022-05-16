@@ -1,4 +1,5 @@
 import * as React from "react";
+import Stack from "@mui/material/Stack";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -7,15 +8,30 @@ import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
-import Avatar from "@mui/material/Avatar";
+import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-import AdbIcon from "@mui/icons-material/Adb";
-import LocalDrinkIcon from '@mui/icons-material/LocalDrink';
-import logo from "../logo.png";
+
+import LocalDrinkIcon from "@mui/icons-material/LocalDrink";
+
+import Badge from "@mui/material/Badge";
+import MailIcon from "@mui/icons-material/Mail";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+
+function notificationsLabel(count) {
+  if (count === 0) {
+    return "no notifications";
+  }
+  if (count > 99) {
+    return "more than 99 notifications";
+  }
+  return `${count} notifications`;
+}
 
 const theme = createTheme({
   palette: {
@@ -35,7 +51,7 @@ const theme = createTheme({
   },
 });
 
-const pages = ["商店", "關於我們", "Products", "Pricing", "Blog"];
+const pages = ["關於我們", "瀏覽商品", "會員中心", "聯絡我們"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const ResponsiveAppBar = () => {
@@ -62,7 +78,9 @@ const ResponsiveAppBar = () => {
       <AppBar position="sticky" color="secondary">
         <Container maxWidth="xl">
           <Toolbar disableGutters>
-            <LocalDrinkIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
+            <LocalDrinkIcon
+              sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}
+            />
             <Typography
               variant="h6"
               noWrap
@@ -92,6 +110,7 @@ const ResponsiveAppBar = () => {
               >
                 <MenuIcon />
               </IconButton>
+
               <Menu
                 id="menu-appbar"
                 anchorEl={anchorElNav}
@@ -117,7 +136,9 @@ const ResponsiveAppBar = () => {
                 ))}
               </Menu>
             </Box>
-            <LocalDrinkIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
+            <LocalDrinkIcon
+              sx={{ display: { xs: "flex", md: "none" }, mr: 1 }}
+            />
             <Typography
               variant="h5"
               noWrap
@@ -149,13 +170,30 @@ const ResponsiveAppBar = () => {
             </Box>
 
             <Box sx={{ flexGrow: 0 }}>
+              <IconButton aria-label={notificationsLabel(100)}>
+                <Badge color="warning" badgeContent={3}>
+                  <ShoppingCartIcon />
+                </Badge>
+              </IconButton>
+              <IconButton aria-label={notificationsLabel(100)}>
+                <Badge color="warning" badgeContent={1}>
+                  <MailIcon />
+                </Badge>
+              </IconButton>
+              <IconButton aria-label={notificationsLabel(100)}>
+                <Badge color="warning">
+                  <FacebookIcon />
+                </Badge>
+              </IconButton>
+              <IconButton aria-label={notificationsLabel(100)}>
+                <Badge color="warning">
+                  <InstagramIcon />
+                </Badge>
+              </IconButton>
 
               <Tooltip title="Open settings">
-                <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                  <Avatar
-                    alt="Remy Sharp"
-                    src={"/static/images/avatar/2.jpg"}
-                  />
+                <IconButton onClick={handleOpenUserMenu}>
+                <AccountBoxIcon />
                 </IconButton>
               </Tooltip>
               <Menu

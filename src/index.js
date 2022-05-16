@@ -1,25 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-// import Logo from './components/Logo';
-import Header from './components/Header';
-import Badge from './components/Badge';
+import Appbar from './components/Appbar'
 import Carousel from './components/Carousel';
-// import reportWebVitals from './reportWebVitals';
-
 import Heading from './components/Heading';
 import ImageList from './components/ImageList';
-
-import Drawer from './components/Drawer'
-
-import Appbar from './components/Appbar'
+// import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    {/* <Badge />
-    <Drawer />
-    <Header /> */}
     <Appbar />
     <Carousel />
     <Heading />
