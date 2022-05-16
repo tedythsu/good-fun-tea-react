@@ -12,12 +12,15 @@ import ImageList from './components/ImageList';
 
 import Drawer from './components/Drawer'
 
+import Appbar from './components/Appbar'
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Badge />
+    {/* <Badge />
     <Drawer />
-    <Header />
+    <Header /> */}
+    <Appbar />
     <Carousel />
     <Heading />
     <ImageList />
