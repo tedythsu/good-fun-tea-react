@@ -1,5 +1,5 @@
 import * as React from "react";
-import Stack from "@mui/material/Stack";
+// import Stack from "@mui/material/Stack";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -16,7 +16,7 @@ import MenuItem from "@mui/material/MenuItem";
 import LocalDrinkIcon from "@mui/icons-material/LocalDrink";
 
 import Badge from "@mui/material/Badge";
-import MailIcon from "@mui/icons-material/Mail";
+// import MailIcon from "@mui/icons-material/Mail";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";

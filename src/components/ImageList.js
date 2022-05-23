@@ -3,12 +3,6 @@ import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import ImageListItemBar from "@mui/material/ImageListItemBar";
 
-import Button from "@mui/material/Button";
-import DeleteIcon from "@mui/icons-material/Delete";
-import SendIcon from "@mui/icons-material/Send";
-import Stack from "@mui/material/Stack";
-import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
-
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 
 const theme = createTheme({
