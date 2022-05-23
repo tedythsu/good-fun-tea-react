@@ -3,43 +3,61 @@ import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import ImageListItemBar from "@mui/material/ImageListItemBar";
 
-import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { ThemeProvider, createTheme } from "@mui/material/styles";
 
 const theme = createTheme({
-    typography: {
-      fontFamily: 'Noto Serif TC, cursive',
-    },
-  });
+  typography: {
+    fontFamily: "Noto Serif TC, cursive",
+  },
+  li: {
+    textDecoration: "none",
+  },
+});
 
 //sx={{ letterSpacing: { xs: 1, md: 6, lg: 7}  }}
 
 export default function TitlebarBelowImageList() {
   return (
     <ThemeProvider theme={theme}>
-    <ImageList sx={{ margin: { xs:"10px", sm:"20px"} }}>
-      {itemData.map((item) => (
-        <ImageListItem key={item.img} sx={{ margin: { xs:"5px", md:"20px"} }}>
-          <img
-            src={`${item.img}?w=248&fit=crop&auto=format`}
-            srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-            alt={item.title}
-            loading="lazy"
-          />
-          <ImageListItemBar
-            title={item.title}
-            // subtitle={<span>by: {item.author}</span>}
-            position="below"
-            align="center"
-          />
-          {/* <Stack direction="row" spacing={1} justifyContent="center">
+      <ImageList sx={{ margin: { xs: "10px", sm: "20px" } }}>
+        {itemData.map((item) => (
+          // <a href={item.title} target="_blank" rel="noopener noreferrer">
+          <ImageListItem
+            key={item.img}
+            sx={{
+              margin: { xs: "5px", md: "20px" },
+              textDecoration: "none",
+              color: "black",
+              "&:hover": {
+                color: "#E3C16F",
+                transform: "scale(1.1)",
+                transition: "500ms"
+              },
+            }}
+            component="a"
+            href={item.title}
+          >
+            <img
+              src={`${item.img}?w=248&fit=crop&auto=format`}
+              srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+              alt={item.title}
+              loading="lazy"
+            />
+            <ImageListItemBar
+              title={item.title}
+              // subtitle={<span>by: {item.author}</span>}
+              position="below"
+              align="center"
+            />
+            {/* <Stack direction="row" spacing={1} justifyContent="center">
             <Button variant="contained" color="success" endIcon={<ShoppingBagIcon />}>
               加入購物車
             </Button>
           </Stack> */}
-          
-        </ImageListItem>
-      ))}
-    </ImageList>
+          </ImageListItem>
+          // </a>
+        ))}
+      </ImageList>
     </ThemeProvider>
   );
 }

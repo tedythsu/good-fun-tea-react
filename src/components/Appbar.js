@@ -8,7 +8,7 @@ import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
-import AccountBoxIcon from '@mui/icons-material/AccountBox';
+import AccountBoxIcon from "@mui/icons-material/AccountBox";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
@@ -49,6 +49,14 @@ const theme = createTheme({
   typography: {
     fontFamily: `"Noto Serif TC", "Helvetica", "Arial", sans-serif`,
   },
+  iconbutton: {
+    backgroundColor: '#3c52b2',
+    color: '#fff',
+    '&:hover': {
+      backgroundColor: '#fff',
+      color: '#3c52b2',
+  },
+}
 });
 
 const pages = ["關於我們", "瀏覽商品", "會員中心", "聯絡我們"];
@@ -162,7 +170,13 @@ const ResponsiveAppBar = () => {
                 <Button
                   key={page}
                   onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: "black", display: "block" }}
+                  sx={{ my: 2, color: "black", display: "block", textDecorationColor: "#fff", 
+                  '&:hover': {
+                    color: "#E3C16F",
+                    // textDecoration: "underline",
+                    // textDecorationColor: "#E3C16F",
+                    // transition: "500ms"
+                } }}
                 >
                   {page}
                 </Button>
@@ -175,19 +189,33 @@ const ResponsiveAppBar = () => {
                   <ShoppingCartIcon />
                 </Badge>
               </IconButton>
-              <IconButton sx={{ flexGrow: 0, display: { xs: "none", sm: "inline-flex" } }} aria-label={notificationsLabel(100)} onClick={() => window.open('https://www.facebook.com/%E5%8F%A4%E9%A2%A8%E8%8C%B6%E5%89%B5-Good-Fun-108574641279639/')}>
+              <IconButton
+                sx={{ flexGrow: 0, display: { xs: "none", sm: "inline-flex" } }}
+                aria-label={notificationsLabel(100)}
+                onClick={() =>
+                  window.open(
+                    "https://www.facebook.com/%E5%8F%A4%E9%A2%A8%E8%8C%B6%E5%89%B5-Good-Fun-108574641279639/"
+                  )
+                }
+              >
                 <Badge color="warning">
                   <FacebookIcon />
                 </Badge>
               </IconButton>
-              <IconButton sx={{ flexGrow: 0, display: { xs: "none", sm: "inline-flex" } }} aria-label={notificationsLabel(100)} onClick={() => window.open('https://www.instagram.com/gdfuntea/')}>
+              <IconButton
+                sx={{ flexGrow: 0, display: { xs: "none", sm: "inline-flex" } }}
+                aria-label={notificationsLabel(100)}
+                onClick={() =>
+                  window.open("https://www.instagram.com/gdfuntea/")
+                }
+              >
                 <Badge color="warning">
                   <InstagramIcon />
                 </Badge>
               </IconButton>
               <Tooltip title="Open settings">
                 <IconButton onClick={handleOpenUserMenu}>
-                <AccountBoxIcon />
+                  <AccountBoxIcon />
                 </IconButton>
               </Tooltip>
               <Menu
