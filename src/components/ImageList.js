@@ -21,17 +21,17 @@ export default function TitlebarBelowImageList() {
     <ThemeProvider theme={theme}>
       <ImageList sx={{ margin: { xs: "10px", sm: "20px" } }}>
         {itemData.map((item) => (
-          // <a href={item.title} target="_blank" rel="noopener noreferrer">
           <ImageListItem
             key={item.img}
             sx={{
               margin: { xs: "5px", md: "20px" },
               textDecoration: "none",
               color: "black",
+              transform: "scale(0.9)",
+              transition: "transform 300ms",
               "&:hover": {
                 color: "#E3C16F",
-                transform: "scale(1.1)",
-                transition: "500ms"
+                transform: "scale(1.0)",
               },
             }}
             component="a"
@@ -55,7 +55,6 @@ export default function TitlebarBelowImageList() {
             </Button>
           </Stack> */}
           </ImageListItem>
-          // </a>
         ))}
       </ImageList>
     </ThemeProvider>
