@@ -60,7 +60,7 @@ const theme = createTheme({
 });
 
 const pages = ["關於我們", "瀏覽商品", "會員中心", "聯絡我們"];
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
+const settings = ["個人檔案", "帳號", "登出"];
 
 const ResponsiveAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
